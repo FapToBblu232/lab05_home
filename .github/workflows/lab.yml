@@ -24,14 +24,15 @@ jobs:
       cmake ..
       cmake --build .
     
+  - name: Install lcov
+    run: sudo apt-get install -y lcov
+    
   - name: lcov
     run: lcov -c -d _build/CMakeFiles/banking.dir/banking/ --include *.cpp --output-file ./coverage/lcov.info
   
   - name: Run tests
     run: _build/my_test
 
-  - name: Install lcov
-    run: sudo apt-get install -y lcov
 
 
   - name: Publish to coveralls.io
