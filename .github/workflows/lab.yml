@@ -23,7 +23,7 @@ jobs:
   - name: Configurate
     run: |
         rm -rf ${{github.workspace}}/_build
-        mrdir _build && cd _build
+        mkdir _build && cd _build
         cmake ..
         cmake --build .
 
