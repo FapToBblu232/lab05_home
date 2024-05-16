@@ -28,4 +28,4 @@ jobs:
         cmake --build .
 
   - name: Run tests
-    run: build/my_test
+    run: _build/my_test
