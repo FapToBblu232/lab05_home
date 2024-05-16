@@ -12,13 +12,13 @@
 3. Настройте сборочную процедуру на **TravisCI**.
 4. Настройте [Coveralls.io](https://coveralls.io/).
 
-# Создадим папку third-party и добавим туда gtest  
+### Создадим папку third-party и добавим туда gtest  
 
 ```
 $ mkdir third-party
 $ git submodule add https://github.com/google/googletest third-party/gtest
 ```
-# Добавим CMakeLists.txt в главную папку и напишем его  
+### Добавим CMakeLists.txt в главную папку и напишем его  
 
 ```
 $ touch CMakeLists.txt && nano CMakeLists.txt
@@ -61,7 +61,7 @@ if(BUILD_TESTS)
 endif()
 ```
 
-# Добавим заранее указанную папку 'tests', а в ней файл tests.cpp  
+### Добавим заранее указанную папку 'tests', а в ней файл tests.cpp  
 ```bash
 touch tests/tests.cpp
 code tests/tests.cpp
@@ -161,12 +161,12 @@ bool success = Debit(to, sum + fee_);
 bool success = Debit(from, sum + fee_);
 ```
 
-# Добавим папочку coverage, а в ней lcov.info файл  
+### Добавим папочку coverage, а в ней lcov.info файл  
 
 ```
 touch coverage/lcov.info
 ```
-# Остолось только добавить yml файл
+### Остолось только добавить yml файл
 ```
 touch .github/workflows/lab.yml
 ```
